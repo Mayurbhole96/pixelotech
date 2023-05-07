@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "df6c61d4-87dc-4e10-b43a-42d7dedc5686",
+		"name": "Pixelotech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23354805",
+		"_collection_link": "https://bold-meadow-10870.postman.co/workspace/New-Team-Workspace~c1da814e-dd31-4e58-bd21-10394dff0547/collection/23354805-df6c61d4-87dc-4e10-b43a-42d7dedc5686?action=share&creator=23354805&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Send OTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mobile_number\": \"9359676102\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/backend/sendotp/"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mobile_number\": \"9876543210\",\r\n  \"password\": \"Pass@123\",\r\n  \"name\": \"Vijay\",\r\n  \"otp\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/backend/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign IN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"mobile_number\": \"9359676102\",\r\n  \"password\": \"Pass@123\",\r\n  \"otp\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/backend/signin/"
+			},
+			"response": []
+		},
+		{
+			"name": "LogOut",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/backend/logout/"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"five\",\r\n    \"image_url\":\"http://getdrawings.com/get-icon#number-one-icon-17.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/backend/image/"
+			},
+			"response": []
+		},
+		{
+			"name": "History",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\":1,\r\n    \"image\":1,\r\n    \"rating\":\"accept\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/backend/history/?author_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"backend",
+						"history",
+						""
+					],
+					"query": [
+						{
+							"key": "author_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/backend/user/"
+			},
+			"response": []
+		}
+	]
+}
